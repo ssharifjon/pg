@@ -1,0 +1,7 @@
+.file, .dir, th { text-align: left; }
+.dir { font-weight: bold; }
+body,  table { margin: auto; }
+table, .header { font-family: monospace; width: 400px; }
+body { text-align: center; }
+.size { text-align: right; }
+
