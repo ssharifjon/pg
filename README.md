@@ -1,7 +1,11 @@
 # Static webpage generator for your files.
 
 ### Usage:
-copy `pg.sh` into your desired directory and execute it. It will generate .pg.html files; open them on your web browser.
+copy `pg.sh`, `style.pg.css`, `templh`, and `templt` into your desired directory and run:
+```
+$ ./pg.sh
+```
+It will generate .pg.html files; open them on your web browser.
 
 ### Cons:
 - can be slow for big directories.
