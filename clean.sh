@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find . \( -name "*.pg-html" -o -name "*.pg-css" \) -delete
+find . \( -name "*.pg.html" -o -name "*.pg.css" \) -delete
