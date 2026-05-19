@@ -14,5 +14,5 @@ copy `pg.sh` into your desired directory and execute it. It will generate .pg.ht
 $ ./clean.sh
 ```
 ### Note
-If you want a nicer look, and displaying of the file sizes, checkout this [commit](https://github.com/ssharifjon/pg/commit/a1254a2b15b6bbd56db278b781a95123ca6e1f10).
+If you want a nicer look, and displaying of the file sizes, checkout branch `fancy`.
 
