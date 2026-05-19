@@ -1,8 +1,5 @@
 #!/bin/bash
 
-dirs=$(find . -type d -printf "%P\n")
-files=$(find . -type f -printf "%P\n")
-
 curdir=$(basename $(pwd))
 printf '<!DOCTYPE html>
 <html>
@@ -22,6 +19,7 @@ printf '		</table>
 	</body>
 </html>' >> ${curdir}.pg.html
 
+dirs=$(find . -type d -printf "%P\n")
 for item in $dirs; do
 	itemname=$(basename $item)
 	pardir=$(dirname $item)
@@ -31,7 +29,6 @@ for item in $dirs; do
 	<body>
 		<table>
 ' > ${item}/${itemname}.pg.html
-	
 	printf "\t\t\t%s\n" "<tr><td><b>/$item</b></td></tr>" >> ${item}/${itemname}.pg.html
 	if [[ $pardirname = "." ]]; then
 		printf "\t\t\t%s\n" "<tr><td><a href="../${curdir}.pg.html"><b>../</b></a></td></tr>" >> ${item}/${itemname}.pg.html
@@ -41,6 +38,7 @@ for item in $dirs; do
 	printf "\t\t\t%s\n" "<tr><td><a href="${itemname}/${itemname}.pg.html"><b>$itemname</b></a></td></tr>" >> ${pardir}/${pardirname}.pg.html
 done
 
+files=$(find . -type f -printf "%P\n") 
 for item in $files; do
 	itemname=$(basename $item)
 	pardir=$(dirname $item)
